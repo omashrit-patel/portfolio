@@ -341,6 +341,32 @@ section {
   gap: 2.5rem;
   justify-content: space-around;
 }
+/* ======= Experience Two-Column Skills Layout ======= */
+
+.experience-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  /* Two equal columns */
+  gap: 1rem 2rem;
+  margin-top: 1rem;
+}
+
+.experience-skills-grid article {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.experience-skills-grid .icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* Optional: Stack columns on mobile */
+@media (max-width: 768px) {
+  .experience-skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 article {
   display: flex;
@@ -429,4 +455,44 @@ footer {
 
 footer p {
   text-align: center;
+}
+/* ====== Skills Section ====== */
+
+#skills {
+  padding: 3rem 1rem;
+  background-color: #fff;
+}
+
+#skills .title {
+  text-align: center;
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 2rem;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.skill-category {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.skill-category h3 {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.skill-category p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
